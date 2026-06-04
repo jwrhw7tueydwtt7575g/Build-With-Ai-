@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+local_delta_mock.json
+*.csv
+*.log
+
+# Node
+node_modules/
+dist/
+.next/
+out/
+build/
+.DS_Store
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+deploy_key.pub

@@ -1,0 +1,162 @@
+{
+  "name": "IngestNormalizePipeline",
+  "properties": {
+    "activities": [
+      {
+        "name": "GetBlobMetadata",
+        "type": "GetMetadata",
+        "typeProperties": {
+          "dataset": {
+            "referenceName": "SourceBlobDataset",
+            "type": "DatasetReference"
+          },
+          "fieldList": [
+            "contentType",
+            "itemName",
+            "size"
+          ]
+        }
+      },
+      {
+        "name": "DetectFileFormat",
+        "type": "WebActivity",
+        "dependsOn": [
+          {
+            "activity": "GetBlobMetadata",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ],
+        "typeProperties": {
+          "url": "@{pipeline().parameters.parserFunctionEndpoint}/detect-format",
+          "method": "POST",
+          "body": {
+            "blobUrl": "@activity('GetBlobMetadata').output.itemName"
+          }
+        }
+      },
+      {
+        "name": "NormalizeAndStore",
+        "type": "WebActivity",
+        "dependsOn": [
+          {
+            "activity": "DetectFileFormat",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ],
+        "typeProperties": {
+          "url": "@{pipeline().parameters.parserFunctionEndpoint}/normalize",
+          "method": "POST",
+          "body": {
+            "format": "@activity('DetectFileFormat').output.detection.format"
+          }
+        }
+      },
+      {
+        "name": "GenerateExecutionPlan",
+        "type": "WebActivity",
+        "dependsOn": [
+          {
+            "activity": "NormalizeAndStore",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ],
+        "typeProperties": {
+          "url": "@{pipeline().parameters.parserFunctionEndpoint}/generate-plan",
+          "method": "POST",
+          "body": {
+            "dataset_stats": "@activity('NormalizeAndStore').output.source_metadata"
+          }
+        }
+      },
+      {
+        "name": "Step7_SparkCleaning",
+        "type": "SynapseNotebook",
+        "dependsOn": [
+          {
+            "activity": "GenerateExecutionPlan",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ],
+        "typeProperties": {
+          "notebook": {
+            "referenceName": "spark_cleaner",
+            "type": "NotebookReference"
+          }
+        }
+      },
+      {
+        "name": "Step8_SparkEnrichment",
+        "type": "SynapseNotebook",
+        "dependsOn": [
+          {
+            "activity": "Step7_SparkCleaning",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ],
+        "typeProperties": {
+          "notebook": {
+            "referenceName": "spark_enricher",
+            "type": "NotebookReference"
+          }
+        }
+      },
+      {
+        "name": "Step9_PatternDiscovery",
+        "type": "SynapseNotebook",
+        "dependsOn": [
+          {
+            "activity": "Step8_SparkEnrichment",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ],
+        "typeProperties": {
+          "notebook": {
+            "referenceName": "spark_patterns",
+            "type": "NotebookReference"
+          }
+        }
+      },
+      {
+        "name": "GenerateBusinessInsights",
+        "type": "WebActivity",
+        "dependsOn": [
+          {
+            "activity": "Step9_PatternDiscovery",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ],
+        "typeProperties": {
+          "url": "@{pipeline().parameters.parserFunctionEndpoint}/generate-insights",
+          "method": "POST",
+          "body": {
+            "patterns": "Result from Step 9"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "blobName": {
+        "type": "string",
+        "defaultValue": ""
+      },
+      "parserFunctionEndpoint": {
+        "type": "string",
+        "defaultValue": "http://your-server-url"
+      }
+    }
+  }
+}

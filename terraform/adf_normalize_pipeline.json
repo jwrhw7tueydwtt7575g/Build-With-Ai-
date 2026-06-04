@@ -1,0 +1,112 @@
+{
+  "name": "NormalizePipeline",
+  "properties": {
+    "activities": [
+      {
+        "name": "NormalizeToCanonical",
+        "type": "WebActivity",
+        "dependsOn": [],
+        "policy": {
+          "timeout": "7.00:00:00",
+          "retry": 2,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "userProperties": [],
+        "typeProperties": {
+          "url": "https://@{variables('openaiEndpoint')}.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview",
+          "method": "POST",
+          "headers": {
+            "api-key": "@variables('openaiKey')",
+            "Content-Type": "application/json"
+          },
+          "body": {
+            "messages": [
+              {
+                "role": "system",
+                "content": "You are a data normalization expert. Convert the provided raw data to the canonical JSON schema.\n\nCanonical Schema:\n{\n  \"source_metadata\": {\n    \"file_format\": \"csv|pdf|json|audio|xml\",\n    \"original_filename\": \"string\",\n    \"ingestion_timestamp\": \"ISO-8601\",\n    \"file_hash\": \"sha256\"\n  },\n  \"data\": [\n    {\n      \"raw_fields\": { \"...original fields...\": \"...\" },\n      \"normalized_fields\": {\n        \"id\": \"unique identifier\",\n        \"timestamp\": \"ISO-8601\",\n        \"value\": \"standardized numeric or text\",\n        \"category\": \"classification\",\n        \"confidence_score\": 0.95\n      }\n    }\n  ]\n}"
+              },
+              {
+                "role": "user",
+                "content": "@pipeline().parameters.rawData"
+              }
+            ],
+            "temperature": 0.2,
+            "max_tokens": 4000
+          }
+        }
+      },
+      {
+        "name": "StoreNormalizedJson",
+        "type": "Copy",
+        "dependsOn": [
+          {
+            "activity": "NormalizeToCanonical",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ],
+        "policy": {
+          "timeout": "7.00:00:00",
+          "retry": 2,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "userProperties": [],
+        "typeProperties": {
+          "source": {
+            "type": "JsonSource",
+            "storeSettings": {
+              "type": "AzureBlockStorageReadSettings"
+            }
+          },
+          "sink": {
+            "type": "JsonSink",
+            "storeSettings": {
+              "type": "AzureBlobStorageWriteSettings"
+            }
+          },
+          "translator": {
+            "type": "TabularTranslator",
+            "mappings": [
+              {
+                "source": "@activity('NormalizeToCanonical').output.Response",
+                "sink": "canonical_output"
+              }
+            ]
+          }
+        },
+        "inputs": [],
+        "outputs": [
+          {
+            "referenceName": "NormalizedJsonDataset",
+            "type": "DatasetReference",
+            "parameters": {
+              "containerName": "normalized-json",
+              "fileName": "@concat(utcnow('yyyy/MM/dd'), '/', utcnow('HHmmss'), '_normalized.json')"
+            }
+          }
+        ]
+      }
+    ],
+    "parameters": {
+      "rawData": {
+        "type": "string",
+        "defaultValue": ""
+      }
+    },
+    "variables": {
+      "openaiEndpoint": {
+        "type": "String"
+      },
+      "openaiKey": {
+        "type": "String"
+      }
+    },
+    "annotations": [],
+    "lastPublishTime": "2024-01-01T00:00:00Z"
+  }
+}

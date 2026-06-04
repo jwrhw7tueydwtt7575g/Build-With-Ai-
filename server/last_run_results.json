@@ -1,0 +1,1197 @@
+{
+  "total_rows": 5694,
+  "quality_score": 94.5,
+  "anomalies": 12,
+  "execution_plan": {
+  "cleaning_steps": [
+    "remove_duplicates",
+    "handle_nulls",
+    "format_dates",
+    "normalize_strings",
+    "outlier_removal_iqr"
+  ],
+  "enrichment_config": {
+    "text_column_name1": [
+      "sentiment_analysis",
+      "entity_extraction",
+      "categorizer",
+      "urgency_score"
+    ],
+    "text_column_name2": [
+      "sentiment_analysis",
+      "entity_extraction"
+    ],
+    "non_text_column_name": [
+      "feature_scaling",
+      "one_hot_encoding"
+    ]
+  },
+  "pattern_discovery": [
+    "correlation_matrix",
+    "outlier_detection_isolation_forest",
+    "pca_dimensionality_reduction",
+    "kmeans_clustering"
+  ]
+},
+  "insights": "- [Spike Alert] Three major data spikes detected. Investigate underlying causes to understand potential operational or market shifts.  \n- [Anomaly Warning] Twelve anomalies identified. Prioritize these for review to mitigate risks and uncover hidden opportunities.  \n- [Correlation Found] Significant correlation detected. Explore related variables to leverage insights for strategic planning or decision-making.  ",
+  "sample_records": [
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "1995.03",
+      "Data_value": "2368.69",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_0",
+      "timestamp": "2026-06-03T11:11:18.569256",
+      "record_index": 0
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "1995.06",
+      "Data_value": "2100.44",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_1",
+      "timestamp": "2026-06-03T11:11:18.569263",
+      "record_index": 1
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "1995.09",
+      "Data_value": "2070.21",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_2",
+      "timestamp": "2026-06-03T11:11:18.569267",
+      "record_index": 2
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "1995.12",
+      "Data_value": "2284.77",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_3",
+      "timestamp": "2026-06-03T11:11:18.569271",
+      "record_index": 3
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "1996.03",
+      "Data_value": "2134.76",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_4",
+      "timestamp": "2026-06-03T11:11:18.569275",
+      "record_index": 4
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "1996.06",
+      "Data_value": "2038.45",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_5",
+      "timestamp": "2026-06-03T11:11:18.569279",
+      "record_index": 5
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "1996.09",
+      "Data_value": "2031.17",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_6",
+      "timestamp": "2026-06-03T11:11:18.569283",
+      "record_index": 6
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "1996.12",
+      "Data_value": "2263.97",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_7",
+      "timestamp": "2026-06-03T11:11:18.569287",
+      "record_index": 7
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "1997.03",
+      "Data_value": "1997.05",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_8",
+      "timestamp": "2026-06-03T11:11:18.569290",
+      "record_index": 8
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "1997.06",
+      "Data_value": "2025.13",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_9",
+      "timestamp": "2026-06-03T11:11:18.569294",
+      "record_index": 9
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "1997.09",
+      "Data_value": "2009.55",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_10",
+      "timestamp": "2026-06-03T11:11:18.569297",
+      "record_index": 10
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "1997.12",
+      "Data_value": "2199.21",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_11",
+      "timestamp": "2026-06-03T11:11:18.569300",
+      "record_index": 11
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "1998.03",
+      "Data_value": "2081.28",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_12",
+      "timestamp": "2026-06-03T11:11:18.569304",
+      "record_index": 12
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "1998.06",
+      "Data_value": "2074.51",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_13",
+      "timestamp": "2026-06-03T11:11:18.569307",
+      "record_index": 13
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "1998.09",
+      "Data_value": "1945.92",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_14",
+      "timestamp": "2026-06-03T11:11:18.569324",
+      "record_index": 14
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "1998.12",
+      "Data_value": "2174.62",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_15",
+      "timestamp": "2026-06-03T11:11:18.569330",
+      "record_index": 15
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "1999.03",
+      "Data_value": "2041.11",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_16",
+      "timestamp": "2026-06-03T11:11:18.569333",
+      "record_index": 16
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "1999.06",
+      "Data_value": "2086.81",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_17",
+      "timestamp": "2026-06-03T11:11:18.569337",
+      "record_index": 17
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "1999.09",
+      "Data_value": "2189.79",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_18",
+      "timestamp": "2026-06-03T11:11:18.569341",
+      "record_index": 18
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "1999.12",
+      "Data_value": "2285.29",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_19",
+      "timestamp": "2026-06-03T11:11:18.569344",
+      "record_index": 19
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "2000.03",
+      "Data_value": "2222.68",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_20",
+      "timestamp": "2026-06-03T11:11:18.569347",
+      "record_index": 20
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "2000.06",
+      "Data_value": "2281.39",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_21",
+      "timestamp": "2026-06-03T11:11:18.569350",
+      "record_index": 21
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "2000.09",
+      "Data_value": "2314.49",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_22",
+      "timestamp": "2026-06-03T11:11:18.569354",
+      "record_index": 22
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "2000.12",
+      "Data_value": "2725.07",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_23",
+      "timestamp": "2026-06-03T11:11:18.569357",
+      "record_index": 23
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "2001.03",
+      "Data_value": "2455.79",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_24",
+      "timestamp": "2026-06-03T11:11:18.569361",
+      "record_index": 24
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "2001.06",
+      "Data_value": "2656.11",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_25",
+      "timestamp": "2026-06-03T11:11:18.569365",
+      "record_index": 25
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "2001.09",
+      "Data_value": "2654.37",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_26",
+      "timestamp": "2026-06-03T11:11:18.569368",
+      "record_index": 26
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "2001.12",
+      "Data_value": "2745.46",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_27",
+      "timestamp": "2026-06-03T11:11:18.569372",
+      "record_index": 27
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "2002.03",
+      "Data_value": "2652.62",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_28",
+      "timestamp": "2026-06-03T11:11:18.569375",
+      "record_index": 28
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "2002.06",
+      "Data_value": "2682.44",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_29",
+      "timestamp": "2026-06-03T11:11:18.569378",
+      "record_index": 29
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "2002.09",
+      "Data_value": "2728.65",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_30",
+      "timestamp": "2026-06-03T11:11:18.569382",
+      "record_index": 30
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "2002.12",
+      "Data_value": "2829.27",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_31",
+      "timestamp": "2026-06-03T11:11:18.569385",
+      "record_index": 31
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "2003.03",
+      "Data_value": "2544.22",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_32",
+      "timestamp": "2026-06-03T11:11:18.569388",
+      "record_index": 32
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "2003.06",
+      "Data_value": "2558.36",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_33",
+      "timestamp": "2026-06-03T11:11:18.569392",
+      "record_index": 33
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "2003.09",
+      "Data_value": "2576.08",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_34",
+      "timestamp": "2026-06-03T11:11:18.569395",
+      "record_index": 34
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "2003.12",
+      "Data_value": "2812.78",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_35",
+      "timestamp": "2026-06-03T11:11:18.569399",
+      "record_index": 35
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "2004.03",
+      "Data_value": "2553.85",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_36",
+      "timestamp": "2026-06-03T11:11:18.569402",
+      "record_index": 36
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "2004.06",
+      "Data_value": "2839.01",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_37",
+      "timestamp": "2026-06-03T11:11:18.569406",
+      "record_index": 37
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "2004.09",
+      "Data_value": "2944.86",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_38",
+      "timestamp": "2026-06-03T11:11:18.569410",
+      "record_index": 38
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "2004.12",
+      "Data_value": "3127.86",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_39",
+      "timestamp": "2026-06-03T11:11:18.569413",
+      "record_index": 39
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "2005.03",
+      "Data_value": "2866.78",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_40",
+      "timestamp": "2026-06-03T11:11:18.569417",
+      "record_index": 40
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "2005.06",
+      "Data_value": "3136.88",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_41",
+      "timestamp": "2026-06-03T11:11:18.569421",
+      "record_index": 41
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "2005.09",
+      "Data_value": "3191.08",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_42",
+      "timestamp": "2026-06-03T11:11:18.569424",
+      "record_index": 42
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "2005.12",
+      "Data_value": "3368.75",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_43",
+      "timestamp": "2026-06-03T11:11:18.569427",
+      "record_index": 43
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "2006.03",
+      "Data_value": "3159.73",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_44",
+      "timestamp": "2026-06-03T11:11:18.569431",
+      "record_index": 44
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "2006.06",
+      "Data_value": "3326.03",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_45",
+      "timestamp": "2026-06-03T11:11:18.569434",
+      "record_index": 45
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "2006.09",
+      "Data_value": "3644.39",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_46",
+      "timestamp": "2026-06-03T11:11:18.569437",
+      "record_index": 46
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "2006.12",
+      "Data_value": "3726.87",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_47",
+      "timestamp": "2026-06-03T11:11:18.569440",
+      "record_index": 47
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "2007.03",
+      "Data_value": "3409.54",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_48",
+      "timestamp": "2026-06-03T11:11:18.569444",
+      "record_index": 48
+    }
+  },
+  {
+    "raw_fields": {
+      "Series_reference": "WTSQ.SFA1CA",
+      "Period": "2007.06",
+      "Data_value": "3590.18",
+      "Suppressed": "",
+      "STATUS": "F",
+      "UNITS": "Dollars",
+      "Magnitude": "6",
+      "Subject": "Wholesale Trade Survey - WTS",
+      "Group": "Industry by variable - (ANZSIC06) - Subannual Financial Collection",
+      "Series_title_1": "Basic material wholesaling",
+      "Series_title_2": "Sales (operating income)",
+      "Series_title_3": "Current prices",
+      "Series_title_4": "Unadjusted",
+      "Series_title_5": ""
+    },
+    "normalized_fields": {
+      "id": "row_49",
+      "timestamp": "2026-06-03T11:11:18.569447",
+      "record_index": 49
+    }
+  }
+],
+  "fuzzy_logs": [
+    {"source": "Period", "target": "created_at", "score": 100},
+    {"source": "Data_value", "target": "amount", "score": 92},
+    {"source": "Series_reference", "target": "customer_id", "score": 85},
+    {"source": "Series_title_1", "target": "description", "score": 88}
+  ],
+  "null_stats": {"Series_reference": 0, "Period": 0, "Data_value": 0.4, "Suppressed": 85},
+  "processed_at": "2026-06-03 16:41:25"
+}
