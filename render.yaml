@@ -1,0 +1,33 @@
+services:
+  # -------------------------------------------------------------
+  # 1. FastAPI Backend
+  # -------------------------------------------------------------
+  - type: web
+    name: aether-flow-backend
+    env: python
+    buildCommand: "cd server && pip install -r requirements.txt"
+    startCommand: "cd server && uvicorn main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: AZURE_OPENAI_ENDPOINT
+        sync: false
+      - key: AZURE_OPENAI_API_KEY
+        sync: false
+      - key: AZURE_OPENAI_DEPLOYMENT_NAME
+        value: "gpt-4o"
+      - key: FRONTEND_URL
+        value: "https://aether-flow-frontend.onrender.com"
+
+  # -------------------------------------------------------------
+  # 2. Next.js Frontend
+  # -------------------------------------------------------------
+  - type: web
+    name: aether-flow-frontend
+    env: node
+    buildCommand: "cd Frontend && npm install && npm run build"
+    startCommand: "cd Frontend && npm run start"
+    envVars:
+      - key: NEXT_PUBLIC_API_URL
+        fromService:
+          type: web
+          name: aether-flow-backend
+          envVarKey: RENDER_EXTERNAL_URL
