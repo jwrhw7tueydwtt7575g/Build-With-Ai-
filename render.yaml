@@ -5,6 +5,7 @@ services:
   - type: web
     name: aether-flow-backend
     env: python
+    plan: free
     buildCommand: "cd server && pip install -r requirements.txt"
     startCommand: "cd server && uvicorn main:app --host 0.0.0.0 --port $PORT"
     envVars:
@@ -23,6 +24,7 @@ services:
   - type: web
     name: aether-flow-frontend
     env: node
+    plan: free
     buildCommand: "cd Frontend && npm install && npm run build"
     startCommand: "cd Frontend && npm run start"
     envVars:
@@ -31,3 +33,4 @@ services:
           type: web
           name: aether-flow-backend
           envVarKey: RENDER_EXTERNAL_URL
+
